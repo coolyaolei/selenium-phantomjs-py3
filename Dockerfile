@@ -3,8 +3,10 @@ MAINTAINER coolyaolei<coolyaolei@sina.com>
 
 USER root
 
-RUN sed -i 's/deb.debian.org/mirrors.ustc.edu.cn/g' /etc/apt/sources.list && \
-sed -i 's/deb http:\/\/security.debian.org/#deb http:\/\/security.debian.org/g' /etc/apt/sources.list && \
+RUN pwd && \ 
+# Change Mirror For China
+# sed -i 's/deb.debian.org/mirrors.ustc.edu.cn/g' /etc/apt/sources.list && \
+# sed -i 's/deb http:\/\/security.debian.org/#deb http:\/\/security.debian.org/g' /etc/apt/sources.list && \
 apt-get update && \
 apt-get -y install python3 python3-selenium phantomjs
 
