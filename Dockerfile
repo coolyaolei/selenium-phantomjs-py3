@@ -12,8 +12,8 @@ apt-get -y install python3 python3-selenium wget
 
 RUN wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2 && \
 tar jxvfp phantomjs-2.1.1-linux-x86_64.tar.bz2 && \
-mv phantomjs-2.1.1-linux-x86_64.tar.bz2  /usr/local/phantomjs && \
-ln -sf /usr/local/phantomjs/bin/phantomjs /bin/phantomjs
+mv phantomjs-2.1.1-linux-x86_64  /usr/local/phantomjs && \
+ln -sf /usr/local/phantomjs/bin/phantomjs /usr/local/bin/phantomjs
 
 
 # Add Tini
