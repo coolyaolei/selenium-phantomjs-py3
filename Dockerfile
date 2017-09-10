@@ -8,7 +8,12 @@ RUN pwd && \
 # sed -i 's/deb.debian.org/mirrors.ustc.edu.cn/g' /etc/apt/sources.list && \
 # sed -i 's/deb http:\/\/security.debian.org/#deb http:\/\/security.debian.org/g' /etc/apt/sources.list && \
 apt-get update && \
-apt-get -y install python3 python3-selenium phantomjs
+apt-get -y install python3 python3-selenium wget
+
+RUN wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2 && \
+tar jxvfp phantomjs-2.1.1-linux-x86_64.tar.bz2 && \
+mv phantomjs-2.1.1-linux-x86_64.tar.bz2  /usr/local/phantomjs && \
+ln -sf /usr/local/phantomjs/bin/phantomjs /bin/phantomjs
 
 
 # Add Tini
