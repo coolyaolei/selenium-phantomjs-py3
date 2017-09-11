@@ -24,7 +24,7 @@ pip3 install ipython
 
 # Add Tini
 ENV TINI_VERSION v0.16.1
-#ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /sbin/tini
-ADD http://192.169.3.229/tini /sbin/tini
+ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /sbin/tini
+#ADD http://192.169.3.229/tini /sbin/tini
 RUN chmod +x /sbin/tini
 ENTRYPOINT ["/sbin/tini", "--"]
