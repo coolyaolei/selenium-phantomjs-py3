@@ -9,8 +9,9 @@ RUN pwd && \
 # sed -i 's/deb http:\/\/security.debian.org/#deb http:\/\/security.debian.org/g' /etc/apt/sources.list && \
 apt-get update && \
 apt-get install -y python3 python3-selenium python3-pip wget && \
+# China fonts
 apt-get install -y xfonts-wqy
-ENV PHANTOMJS 
+
 RUN wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2 && \
 # RUN wget -q http://192.169.3.229/phantomjs-2.1.1-linux-x86_64.tar.bz2 && \
 tar jxvfp phantomjs-2.1.1-linux-x86_64.tar.bz2 && \
